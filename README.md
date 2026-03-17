@@ -12,5 +12,3 @@ App de chat para Android que utiliza **Google Gemini** para ofrecer respuestas m
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f87026f4-dc1c-45c6-b14f-2e1a9763db4b" alt="Gemini Chat App Screenshot" width="300">
 </p>
----
-**Autor:** Fedor Litvinov
