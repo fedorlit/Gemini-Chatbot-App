@@ -2,18 +2,15 @@ package com.example.geminichatbotapp.data
 
 import android.graphics.Bitmap
 import com.google.ai.client.generativeai.GenerativeModel
-import com.google.ai.client.generativeai.type.ResponseStoppedException
 import com.google.ai.client.generativeai.type.content
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-
+import com.example.geminichatbotapp.BuildConfig
 object ChatData {
-
-    val api_key = "AIzaSyD_TfAOWqNDrm-ouGG5wjfyYLG0Gr2Nqr4"
 
     suspend fun getResponse(prompt: String): Chat {
         val generativeModel = GenerativeModel(
-            modelName = "gemini-2.5-flash-lite", apiKey = api_key
+            modelName = "gemini-2.5-flash-lite", apiKey = BuildConfig.apiKey
         )
 
         try {
@@ -39,7 +36,7 @@ object ChatData {
 
     suspend fun getResponseWithImage(prompt: String, bitmap: Bitmap): Chat {
         val generativeModel = GenerativeModel(
-            modelName = "gemini-2.5-flash-lite", apiKey = api_key
+            modelName = "gemini-2.5-flash-lite", apiKey = BuildConfig.apiKey
         )
 
         try {
